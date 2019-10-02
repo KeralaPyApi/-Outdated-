@@ -4,32 +4,15 @@
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#212121">
-<Style>
-a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-}
+<Script>
+ $('.btnNext').click(function(){
+  $('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
 
-a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.previous {
-    background-color: #f1f1f1;
-    color: black;
-}
-
-.next {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.round {
-    border-radius: 50%;
-}
-</Style>
+  $('.btnPrevious').click(function(){
+  $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+});
+</Script>
 <Title>Kerala Python Api</Title>
   
 </Head>
@@ -49,9 +32,18 @@ a:hover {
 KeralaPyApi helps you build applications for Telegram Bot API.<br> It works on <code>Python 2.7</code> and <code>Python 3.</code> For Python 3.5+, it also has an async version based on asyncio.
 
 For a time, I tried to list the features here like many projects do. Eventually, I gave up.
+<div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+        <a class="btn btn-primary btnNext" >Next</a>
+    </div>
+    <div class="tab-pane" id="tab2">
+        <a class="btn btn-primary btnNext" >Next</a>
+        <a class="btn btn-primary btnPrevious" >Previous</a>
+    </div>
+    <div class="tab-pane" id="tab3">
+        <a class="btn btn-primary btnPrevious" >Previous</a>
+    </div>
 </div>
-<a href="async.html" class="next">Next &raquo;</a>
-
         
         <div class="footer text-center">
             <br>
